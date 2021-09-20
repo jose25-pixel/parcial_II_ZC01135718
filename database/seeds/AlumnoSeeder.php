@@ -25,6 +25,9 @@ DB::table('alumno')->insert([
       ]);
    DB::insert('INSERT INTO alumno(nombre,apellido,fechanacimiento, direcion, genero, telefono, email, clave) VALUES(?,?,?,?,?,?,?,?)',['Susana','venites','1999-08-26','la calle vieja','femenino','78873827','susuana@gmail.com','3664774']);
 
+
+/*-------usando el modelo para insertar datos mediante---------*/
+
    Alumno::create([
        'nombre'=>'Manuel',
        'apellido'=>'perez',
@@ -36,6 +39,6 @@ DB::table('alumno')->insert([
         'clave'=>'34554'
 
       ]);
-    factory(Alumno::class,18)->create();
+    factory(Alumno::class,18)->create();//usando factory
     }
 }
